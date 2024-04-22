@@ -1,0 +1,24 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+/* Adjustments for the map container */
+#map {
+  overflow: hidden;
+  padding-bottom: 50%; /* Aspect ratio of 2:1 */
+  position: relative;
+  height: 0; /* Height will be determined by padding-bottom */
+}
+
+#map iframe {
+  left: 0;
+  top: 0;
+  height: 100%; /* Fill the container's height */
+  width: 100%; /* Fill the container's width */
+  position: absolute;
+}

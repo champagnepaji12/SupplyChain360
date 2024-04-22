@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps</title>
+    <style>
+        body {
+            padding: 50px;
+            font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+        }
+
+        a {
+            color: #00B7FF;
+        }
+
+        .map-responsive {
+            overflow: hidden;
+            padding-bottom: 50%;
+            position: relative;
+            height: 0;
+        }
+
+        .map-responsive iframe {
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div id="map" class="map-responsive"></div>
+
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC64x-o99hmQ5gDFTV3xG2b5T5jh062tas&callback=initMap" defer></script>
+    <script>
+        "use strict";
+
+        function initMap() {
+    const position = { lat: -25.344, lng: 131.031 };
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 60, // Set the desired default zoom level here
+        center: position,
+        mapId: "1e4181793b7dd76a" // Map ID is required for advanced markers.
+    });
+
+    const marker = new google.maps.marker.AdvancedMarkerElement({
+        map: map,
+        position: position,
+        title: 'Uluru'
+    });
+}
+
+        
+    </script>
+</body>
+</html>
